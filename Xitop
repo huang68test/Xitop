@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakra Detection</title>
+</head>
+<body>
+    <h1>Chakra Detection</h1>
+    <button onclick="detectChakras()">Detect Chakras</button>
+    <div id="result"></div>
+
+    <script>
+        function detectChakras() {
+            var chakras = {
+                "Root Chakra": Math.floor(Math.random() * 201) - 100,
+                "Sacral Chakra": Math.floor(Math.random() * 201) - 100,
+                "Solar Plexus Chakra": Math.floor(Math.random() * 201) - 100,
+                "Heart Chakra": Math.floor(Math.random() * 201) - 100,
+                "Throat Chakra": Math.floor(Math.random() * 201) - 100,
+                "Third Eye Chakra": Math.floor(Math.random() * 201) - 100,
+                "Crown Chakra": Math.floor(Math.random() * 201) - 100
+            };
+
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "<h2>Chakra Results</h2><ul>";
+            for (var chakra in chakras) {
+                resultDiv.innerHTML += "<li>" + chakra + ": " + chakras[chakra] + "</li>";
+            }
+            resultDiv.innerHTML += "</ul>";
+        }
+    </script>
+</body>
+</html>
